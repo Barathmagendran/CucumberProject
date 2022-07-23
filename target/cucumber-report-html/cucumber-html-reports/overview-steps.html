@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 2.0) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber</td>
+              <td>2.0</td>
+            <td>23 Jul 2022, 21:51</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">Hooks.before()</td>
+              <td>3</td>
+              <td class="duration" data-value="671866">0.000</td>
+              <td class="duration" data-value="671866">0.001</td>
+              <td class="duration" data-value="2015600">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.the_user_will_login()</td>
+              <td>2</td>
+              <td class="duration" data-value="329261250">0.329</td>
+              <td class="duration" data-value="329261250">0.516</td>
+              <td class="duration" data-value="658522501">0.658</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_Launches_the_EBay_Website()</td>
+              <td>2</td>
+              <td class="duration" data-value="11340777499">11.340</td>
+              <td class="duration" data-value="11340777499">11.898</td>
+              <td class="duration" data-value="22681554999">22.681</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_Will_Search_by_one_dim_map(DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8817605000">8.817</td>
+              <td class="duration" data-value="8817605000">8.817</td>
+              <td class="duration" data-value="8817605000">8.817</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_Will_Search_the_Redmi_mobile()</td>
+              <td>1</td>
+              <td class="duration" data-value="4589071200">4.589</td>
+              <td class="duration" data-value="4589071200">4.589</td>
+              <td class="duration" data-value="4589071200">4.589</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_add_into_the_cart()</td>
+              <td>2</td>
+              <td class="duration" data-value="7735063949">7.735</td>
+              <td class="duration" data-value="7735063949">10.946</td>
+              <td class="duration" data-value="15470127898">15.470</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_click_the_BuyNow_option()</td>
+              <td>2</td>
+              <td class="duration" data-value="417103050">0.417</td>
+              <td class="duration" data-value="417103050">0.636</td>
+              <td class="duration" data-value="834206100">0.834</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_make_the_payments()</td>
+              <td>2</td>
+              <td class="duration" data-value="120900">0.000</td>
+              <td class="duration" data-value="120900">0.000</td>
+              <td class="duration" data-value="241800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_recive_the_conformation_message()</td>
+              <td>2</td>
+              <td class="duration" data-value="59400">0.000</td>
+              <td class="duration" data-value="59400">0.000</td>
+              <td class="duration" data-value="118801">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_select_the_colour()</td>
+              <td>2</td>
+              <td class="duration" data-value="4793937499">4.793</td>
+              <td class="duration" data-value="4793937499">5.323</td>
+              <td class="duration" data-value="9587874999">9.587</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_select_the_mobile()</td>
+              <td>2</td>
+              <td class="duration" data-value="4530136799">4.530</td>
+              <td class="duration" data-value="4530136799">6.234</td>
+              <td class="duration" data-value="9060273598">9.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">MobliePurchaseSteps.user_will_select_the_storage_size()</td>
+              <td>2</td>
+              <td class="duration" data-value="8858087350">8.858</td>
+              <td class="duration" data-value="8858087350">10.576</td>
+              <td class="duration" data-value="17716174701">17.716</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_make_Payments()</td>
+              <td>1</td>
+              <td class="duration" data-value="287300">0.000</td>
+              <td class="duration" data-value="287300">0.000</td>
+              <td class="duration" data-value="287300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_launch_the_Ebay_WebSite()</td>
+              <td>1</td>
+              <td class="duration" data-value="13695263499">13.695</td>
+              <td class="duration" data-value="13695263499">13.695</td>
+              <td class="duration" data-value="13695263499">13.695</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_login()</td>
+              <td>1</td>
+              <td class="duration" data-value="9247069400">9.247</td>
+              <td class="duration" data-value="9247069400">9.247</td>
+              <td class="duration" data-value="9247069400">9.247</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_search_poco_Mobiles_in_Ebay_website()</td>
+              <td>1</td>
+              <td class="duration" data-value="8038891701">8.038</td>
+              <td class="duration" data-value="8038891701">8.038</td>
+              <td class="duration" data-value="8038891701">8.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_select_add_to_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="8714432700">8.714</td>
+              <td class="duration" data-value="8714432700">8.714</td>
+              <td class="duration" data-value="8714432700">8.714</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_select_the_color()</td>
+              <td>1</td>
+              <td class="duration" data-value="8246086900">8.246</td>
+              <td class="duration" data-value="8246086900">8.246</td>
+              <td class="duration" data-value="8246086900">8.246</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_select_the_material()</td>
+              <td>1</td>
+              <td class="duration" data-value="3534056500">3.534</td>
+              <td class="duration" data-value="3534056500">3.534</td>
+              <td class="duration" data-value="3534056500">3.534</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Tvpurchase.user_will_select_the_tv()</td>
+              <td>1</td>
+              <td class="duration" data-value="3735619200">3.735</td>
+              <td class="duration" data-value="3735619200">3.735</td>
+              <td class="duration" data-value="3735619200">3.735</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>20</td>
+            <td>31</td>
+            <td class="duration">4.665</td>
+            <td class="duration">22.681</td>
+            <td class="duration">2:24.629</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
